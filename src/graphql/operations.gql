@@ -1,0 +1,108 @@
+mutation Login($username: String!, $password: String!) {
+  login(username: $username, password: $password) {
+    jwt
+    user {
+      id
+      username
+      displayName
+      email
+    }
+  }
+}
+
+query GetSession {
+  me {
+    id
+  }
+}
+
+query GetAssignedRoutes {
+  assignedRoutes {
+    id
+    name
+    distance
+    duration
+    durationWithLoadTime
+    started
+    completed
+    geometry {
+      type
+      coordinates
+    }
+    stops {
+      id
+    }
+    driver {
+      id
+      displayName
+    }
+  }
+}
+
+query GetRoute($id: ID) {
+  route(id: $id) {
+    id
+    name
+    distance
+    duration
+    durationWithLoadTime
+    started
+    completed
+    completedDuration
+    stops {
+      id
+      started
+      completed
+      type
+      waypointIndex
+      destination {
+        id
+        name
+        latitude
+        longitude
+      }
+    }
+    geometry {
+      type
+      coordinates
+    }
+    driver {
+      id
+      displayName
+    }
+  }
+}
+
+fragment routeStopFragment on RouteStop {
+  id
+  started
+  completed
+  destination {
+    id
+    name
+    email
+    phone
+    code
+    references
+    longitude
+    latitude
+  }
+}
+
+query GetRouteStop($id: ID!) {
+  routeStop(id: $id) {
+    ...routeStopFragment
+  }
+}
+
+mutation StartRouteStop($id: ID!, $startDatetime: DateTime!) {
+  startRouteStop(id: $id, startDatetime: $startDatetime) {
+    ...routeStopFragment
+  }
+}
+
+mutation CompleteRouteStop($id: ID!, $completionDatetime: DateTime!) {
+  completeRouteStop(id: $id, completionDatetime: $completionDatetime) {
+    ...routeStopFragment
+  }
+}

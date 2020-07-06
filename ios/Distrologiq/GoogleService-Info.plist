@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>966928081095-12rbvoth3iv71qvj1otlcbi2sbh3d1sn.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.966928081095-12rbvoth3iv71qvj1otlcbi2sbh3d1sn</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDoHquBowaA-L1wqC6fpxHNn4sKUM7C7Tk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>966928081095</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>me.jese.distrologiq</string>
+	<key>PROJECT_ID</key>
+	<string>distrologiq-dev</string>
+	<key>STORAGE_BUCKET</key>
+	<string>distrologiq-dev.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:966928081095:ios:cd5fe33065c29ffcf71ee2</string>
+	<key>DATABASE_URL</key>
+	<string>https://distrologiq-dev.firebaseio.com</string>
+</dict>
+</plist>
